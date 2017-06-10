@@ -4,3 +4,9 @@ c:\users\romualdo\documents\visual studio 2015\Projects\problems\problems\bin\De
 c:\users\romualdo\documents\visual studio 2015\Projects\problems\problems\obj\Debug\problems.exe
 c:\users\romualdo\documents\visual studio 2015\Projects\problems\problems\obj\Debug\problems.pdb
 c:\users\romualdo\documents\visual studio 2015\Projects\problems\problems\obj\Debug\problems.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\algorithmic_problems\problems\bin\Debug\problems.exe.config
+C:\Users\user\Documents\Visual Studio 2015\Projects\algorithmic_problems\problems\obj\Debug\problems.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\algorithmic_problems\problems\obj\Debug\problems.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\algorithmic_problems\problems\bin\Debug\problems.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\algorithmic_problems\problems\bin\Debug\problems.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\algorithmic_problems\problems\obj\Debug\problems.csprojResolveAssemblyReference.cache

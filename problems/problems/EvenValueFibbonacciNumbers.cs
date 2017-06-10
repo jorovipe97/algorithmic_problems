@@ -29,34 +29,69 @@ namespace problems
          * 2.b How to check if a number is a perfect square?
          * 3. A condition checking if the fibanaci number is even, if it is true, then sum+=indexNumber.
          */
+        
+        public int Sol2(int upperLimit = 4000000)
+        {
+            int[] head = { 1, 2 };
+            int sum = 0;
+            while (true)
+            {
+                if (!((head[1] & 1) == 1))
+                {
+                    // Number is even (par)
+                    sum += head[1];
+                }
+
+                // last mid curr
+                int last_prev = head[0];
+                head[0] = head[1];                
+                head[1] += last_prev;
+                //Console.WriteLine(head[1]);
+
+                if (head[1] > upperLimit) break;                
+            }
+            return sum;
+        }
+
         public int Sol(int upperLimit=4000000)
         {
             int i = 1;
             int sum = 0;
-            while (i < upperLimit)
+            Console.WriteLine(!((35123 & 1) == 1));
+            while (i <= upperLimit)
             {
-                float eqTest1 = 5*i*i + 4;
-                float eqTest2 = 5*i*i - 4;
-                if (isPerfectSquare(eqTest1) || isPerfectSquare(eqTest2))
+                // Is it a fibbonacci number?
+                if (isAFibbonacciNumber(i))
                 {
-                    
-                    if ((i & 1) == 1)
+                    //Console.WriteLine(i);
+
+                    // Is it a even number?
+                    if (!((i & 1) == 1))
                     {
-                        // The number is even then add to sum.
-                        //Console.WriteLine(i);
+                        // The number is even (par) then add to sum.
+                        Console.WriteLine(i);
                         sum += i;
                     }
                 }
                 i++;
             }
-
             return sum;
         }
 
-        // I should search for an more optime solution for compute square roots
-        private bool isPerfectSquare(float n)
+        public bool isAFibbonacciNumber(int n)
         {
-            return (Math.Sqrt(n) - (int)Math.Sqrt(n)) == 0;
+            double eqTest1 = 5 * n * n + 4;
+            double eqTest2 = 5 * n * n - 4;
+            return isPerfectSquare(eqTest1) || isPerfectSquare(eqTest2);
+        }
+
+        // I should search for an more optime solution for compute square roots
+        private bool isPerfectSquare(double n)
+        {
+            // Check equallity in floating point number is so disturbing for me.
+            double s = Math.Floor( Math.Sqrt(n) );
+            double diff = Math.Abs((s * s) - n);
+            return diff < 0.01;
         }
     }
 }

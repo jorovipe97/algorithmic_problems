@@ -14,7 +14,8 @@ namespace problems
             prob1.whileSol();
 
             EvenValueFibbonacciNumbers prob2 = new EvenValueFibbonacciNumbers();
-            Console.WriteLine(prob2.Sol());
+            Console.WriteLine(prob2.Sol2());
+            // 16114 is not a fib number then last function should return false.
 
             Console.ReadKey();
         }
